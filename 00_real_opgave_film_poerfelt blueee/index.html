@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web template with p5.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+</head>
+
+
+<body>
+    <div class="menu-wrapper">
+        <div class="burger-icon">≡</div>
+        <div class="sidebar">
+        </div>
+    </div>
+    <main>
+
+        <div class="page" id="page1" title="Movie">
+            <div class="background1 parallax">
+                <h2>'Perfect Blue' directed by Satoshi Kon</h2>
+                <p1> Read Information and trailor before watching</p1>
+                <p> Watch down below↓</p>
+
+
+            </div>
+            <div class="background2 parallax">
+                <div class="text-white" style="padding-top: 3rem; text-align: center;">
+                    <p style="font-size: 1.5rem;"></p>
+                </div>
+
+            </div>
+            <div class="background2 parallax">
+                <video width="1300" controls>
+                 <source src="./assets/Perfect Blue 1997.mp4" type="video/mp4">
+                    
+             </video>
+          </div>
+        </div>
+         
+          <div class="page" id="page2" title="Information and trailor">
+    <div class="split left">
+    <div class="centered">
+      <img src="./assets/perperper.jpg" alt="perperper" style="width:75%;">
+    </div>
+  </div>
+
+  <div class="split right">
+    <div class="centered">
+      <h2>Information about the movie and trailor</h2>
+      <video width="600" controls>
+                 <source src="./assets/videoplayback.mp4" type="video/mp4">
+                    
+             </video>
+      <p>Genre: A psychological thriller and psychological horror movie.</p>
+      
+     <p class="movie-description">"A pop singer gives up her career to become an actress, 
+        but she slowly goes insane when she starts 
+        being stalked by an obsessed fan 
+        and what seems to be a ghost of her past"</p>
+     
+       <hr>
+        <a href="https://satoshikon.fandom.com/wiki/Perfect_Blue">Read more about the movie here</a>
+      </div>
+    </div>
+  </div>
+    
+       <div class="page" id="page3" title="Drop down">
+                <select name="theDropdown" id="theDropdown">
+                    <option value="white" selected>Choose a picture</option>
+                    <option value="perfet blue.jpg">1</option>
+                    <option value="perfelt blue.jpg">2</option>
+                 </select>
+               <img id=" perfelt blue" src="./assets/perfelt blue.jpg" alt="perfelt">
+              <img id="perfet blue" src="./assets/perfet blue.jpg" alt="perfet">
+           </div>
+         </div> 
+       </div> 
+
+  </main>
+     <script src="./index.js"></script>
+</body>
+
+</html>
+ 
+      

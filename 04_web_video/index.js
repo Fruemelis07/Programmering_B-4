@@ -1,4 +1,15 @@
-var currentPage = '#page2'
+var currentPage = '#page3'
+var capture 
+var otterSound, girlsgenerationSound
+var recBtn, recorder 
+var isRecording = flase 
+
+
+function preload(){
+    otterSound = loadSound('./assets/ottersound.mp3') 
+    girlsgenerationSound = loadSound('./assets/Girls Generation 소녀시대 I GOT A BOY MV.mp3')
+
+}
 
 //P5 setup() bliver kaldt EN gang før siden vises 
 function setup(){
@@ -7,10 +18,18 @@ function setup(){
     //skift til current page 
     shiftPage(currentPage)
 
-    create = createCapture(VIDEO, {flipped:CSSViewTransitionRule})
-    capture.sßize(720,468)
+    capture = createCapture(VIDEO, {flipped:true})
+    capture.size(720,468)
     select('#page1').child(capture)
-    
+
+    //SOUND 
+    //Make a sound play on moused press
+    select('#otter').mousePressed(()=>{
+        otterSound.play()
+    })
+    girlsgenerationSound = createAudio('./assets/Girls Generation 소녀시대 I GOT A BOY MV.mp3')
+    girlsgenerationSound.showControls()
+    select('#page2').child(rainSound)
 
     
     //Sæt menu op

@@ -106,3 +106,9 @@ h1 {
     font-size: 3rem;
 
 }
+
+#page2 img{
+    width:50vw;
+    height: 50vw;
+    border-radius: 50%;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121213" />
+    <title>Web template with p5.js</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Butcherman&family=Momo+Trust+Display&family=Oswald:wght@298&display=swap" rel="stylesheet">
+   
+</head>
+   <body>
+     <main>
+ 
+        <div title="Front Page" class="page" id="page1">
+             <textarea placeholder="Enter dit navn her for at få en highscore" id="Name Score">
+                 </textarea><br>
+        <button id="startBtn" class="zombie-btn">
+             Start Game
+           </button>
+          </div>
+
+ 
+        <div title="About" class="page" id="page2">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page3">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page4">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page5">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page6">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page7">
+        </div>
+ 
+        <div title="Front Page" class="page" id="page8">
+        </div>
+ 
+        <div class="page show" id="page9">
+          <h1 class="title">Wordle</h1>
+         <div id="game"></div>
+        <hr />
+        <p class="footer">You have 6 attempts — guess wrong and you die! ☠️</p>
+       </div>
+      <div class="page" id="page10">
+     </div>
+     
+    <div class="page show" id="page12">
+     <div style="position:absolute; top:36%; left:52%; transform:translateX(-50%); display:flex; gap:8px;">
+       <input id="d1" maxlength="1" style="width:60px;height:60px;font-size:2rem;text-align:center;background:rgba(0,0,0,0.7);color:white;border:2px solid #ff2a2a;">
+       <input id="d2" maxlength="1" style="width:60px;height:60px;font-size:2rem;text-align:center;background:rgba(0,0,0,0.7);color:white;border:2px solid #ff2a2a;">
+       <input id="d3" maxlength="1" style="width:60px;height:60px;font-size:2rem;text-align:center;background:rgba(0,0,0,0.7);color:white;border:2px solid #ff2a2a;">
+    </div>
+    <div style="position:absolute; top:60%; left:50%; transform:translateX(-50%);">
+       <p id="codeMsg" style="color:white;font-size:1.5rem;text-align:center;"></p>
+     <button class="zombie-btn" id="checkCode">UNLOCK</button>
+  </div>
+</div> 
+
+
+     </main>
+    <script type="module" src="./index.js"></script>
+</body>
+ 
+</html>

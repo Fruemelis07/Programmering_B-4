@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kings&display=swap');
+ 
+ 
+.kings-regular {
+  font-family: "Kings", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+ 
+/* Canvas container - always visible, sits behind pages */
+#canvas-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none;
+}
+ 
+/*All divs inside pages are treated as full width grids*/
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+ 
+ 
+.page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: -100vw;
+    transition: 0.5s step-end all;
+    z-index: 1;
+}
+ 
+.show {
+    left: 0;
+}
+ 
+/* --- everything below is unchanged --- */
+ 
+#pageDead {
+    background-image: url(./Assets/Blood.png);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+}
+ 
+#page1 {
+    background-image: url(./Assets/StartMenu.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page2 {
+    background-image: url(./Assets/Cutscene1.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page3 {
+    background-image: url(./Assets/Cutscene2.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page4 {
+    background-image: url(./Assets/Cutscene3.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page5 {
+    background-image: url(./Assets/Cutscene4.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page6 {
+    background-image: url(./Assets/Cutscene5.png);
+    background-size: cover;
+    background-position: bottom;
+}
+ 
+#page7 {
+    background-image: url(./Assets/Cutscene6.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+#page8 {
+    background-image: url(./Assets/Floor1.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+ 
+#page9 {
+    background-image: url(./Assets/Floor1.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+#wrongKey1  { top: 20%; left: 15%; }
+#wrongKey2 { top: 60%; left: 70%; }
+#wrongKey3 { top: 75%; left: 30%; }
+#wrongKey4 { top: 25%; left: 75%; }
+#wrongKey5 { top: 50%; left: 45%; }
+#wrongKey6 { top: 10%; left: 60%; }
+#rightKey { top: 80%; left: 10%; }
+ 
+#page9 img{
+    width: 10rem;
+    transition: .8s all;
+    position: absolute;
+}
+ 
+#page9 #rightKey:hover{
+    transform: scale(1.25);
+}
+ 
+#page10 {
+    background-image: url(./Assets/Floor1.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+ 
+#page11 {
+    background-image: url(./Assets/Floor1.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+#page12 {
+    background-image: url(./Assets/Cutscene4.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+ 
+#page13 {
+    background-image: url(./Assets/Cutscene4.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+ 
+#page14 {
+    background-image: url(./Assets/Floor1.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+#page15 {
+    background-image: url(./Assets/Cutscene4.png);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.zombie {
+    width: 200px;
+    height: 200px;
+}
