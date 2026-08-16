@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT Modtager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/5.15.2/mqtt.min.js" integrity="sha512-3kmSDJDp+Sk6XIt2AAkhFUrdlBwtWf6eFuksz407qMKcV/d1xfvsF/o4glnPWX/P3/X4yQJ2EBHEBTaWoXGf1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+</head>
+<body>
+    <div id="toast"></div>
+    <nav id="menu"></nav>
+
+    <main>
+        <div class="page show" id="page1" title="Forside">
+            <h1 id="msg">Her kommer der beskeder fra MQTT</h1>
+        </div>
+
+        <div class="page" id="page2" title="Side 2">
+            <h1 id="p2msg">Jeg er side 2</h1>
+        </div>
+
+        <div class="page" id="page3" title="Side 3"></div>
+
+        <div class="page" id="page4" title="Kat-side">
+            <div id="katContainer"></div>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
