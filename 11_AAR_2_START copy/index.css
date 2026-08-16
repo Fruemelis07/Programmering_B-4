@@ -1,11 +1,11 @@
 .page {
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100vw ;
+    height: 100vh ;
     overflow: hidden;
     display: grid;
     place-items: center;
-    position: fixed !important;
-    top: 100vh !important;
+    position: fixed ;
+    top: 100vh ;
     transition: all .6s ease-in-out;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .show {
-    top: 0 !important;
+    top: 0;
 }
 /* Styling til kat-siden */
 #page4{
