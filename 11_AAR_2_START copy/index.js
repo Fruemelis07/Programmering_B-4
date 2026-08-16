@@ -1,10 +1,8 @@
 var client
 
 function setup(){
-    // mqtt er et objekt vi får fra mqtt biblioteket i html siden
     client = mqtt.connect('wss://mqtt.nextservices.dk')
 
-    // Feedback: vis toast når vi er forbundet
     client.on('connect', msg => {
         var toast = select('#toast')
         console.log('Forbundet til NEXT MQTT server')
@@ -15,23 +13,25 @@ function setup(){
         }, 2000)
     })
 
-    // Subscribe = vi LYTTER efter beskeder på disse topics
+        // Subscribe = vi LYTTER efter beskeder på disse topics
     client.subscribe('nugga')
     client.subscribe('nugga/page')
 
-    // Her modtager vi beskeder på de topics, vi abonnerer på
+    selectAll('.page').forEach(p => {
+    let btn = createButton(p.attribute('title'))
+    btn.mousePressed(() => shiftPage('#' + p.attribute('id')))
+    select('#menu').child(btn)
+})
+
     client.on('message', (topic, msg) => {
         console.log(topic, msg.toString())
         msg = msg.toString()
 
-        // Topic 'nugga/page' bruges til direkte side-skift via tal (fx '1', '2')
         if(topic == 'nugga/page'){
-            console.log('nu skal der skiftes side')
             msg = '#page' + msg
             shiftPage(msg)
         }
 
-        // Topic 'nugga' bruges til almindelige beskeder + kat-reaktionen
         if(topic == 'nugga'){
             if(msg === 'kat'){
                 shiftPage('#page4')
@@ -42,7 +42,6 @@ function setup(){
         }
     })
 
-   
     client.publish('programmering/page', '1')
 }
 
